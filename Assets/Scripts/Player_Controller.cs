@@ -20,20 +20,20 @@ public class Player_Controller : MonoBehaviour
 
     [SerializeField] private Transform bookSpawnPoint;
     [SerializeField] private GameObject bookPrefab;
+    public bool isBookInstantiated;
     
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         bookSpawnPoint = GameObject.FindGameObjectWithTag("SpawnBullet").GetComponent<Transform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         PlayerMovement();
-        PlayerAttacks();
+        PlayerSwordSlash();
+        PlayerStun();
     }
 
     #region Movement
@@ -58,18 +58,39 @@ public class Player_Controller : MonoBehaviour
 
     #region Attacks
 
-    private void PlayerAttacks()
+    public void PlayerSwordSlash()
     {
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("ArmAttack");
+            
         }
-        
+    }
+    
+    public void PlayerStun()
+    {
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log("BookAttack");
-            Instantiate(bookPrefab, bookSpawnPoint.transform.position, bookSpawnPoint.transform.rotation);
+            StartCoroutine(Coroutine_BookIsInstantiated());
+            
+            if (isBookInstantiated)
+            {
+                Instantiate(bookPrefab, bookSpawnPoint.transform.position, bookSpawnPoint.transform.rotation);
+                StartCoroutine(Coroutine_BookIsNotInstantiated());
+            }
         }
+    }
+
+    IEnumerator Coroutine_BookIsInstantiated()
+    {
+        yield return new WaitForSeconds(0.2f);
+        isBookInstantiated = true;
+    }
+    
+    IEnumerator Coroutine_BookIsNotInstantiated()
+    {
+        yield return new WaitForSeconds(2f);
+        isBookInstantiated = false;
     }
 
     #endregion

@@ -1,21 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d9924e1-312f-41c8-838a-b1baaf36285d" name="Changes" comment="" />
+    <list default="true" id="0d9924e1-312f-41c8-838a-b1baaf36285d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Book_Mat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Book_Mat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Enemy_Mat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Enemy_Mat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Soldiers/Animator.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Soldiers/Animator/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Soldiers/Animator/Soldiers_AnimatorController.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Soldiers/Animator/Soldiers_AnimatorController.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/ParabolaRoot.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/ParabolaRoot.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BookAttack.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BookAttack/Book_Controller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BookAttack/Book_Controller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BookAttack/MathParabola.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BookAttack/MathParabola.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BookAttack/Parabola_Controller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BookAttack/Parabola_Controller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemiesHealth_Controller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemiesHealth_Controller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies_Controller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies_Controller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerHealth_Controller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerHealth_Controller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Floor_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Floor_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Libro.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Libro.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d3b66f0ad4e34a55b6ef91ab8487819313c000/b0/d923a742/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../M7/UF3/Practica_2/Grupo03_ChallengeFinal_Proyecto/Assets/Scripts/Enemies/Virus_Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../M7/UF3/Practica_2/Grupo03_ChallengeFinal_Proyecto/Assets/Scripts/Player/HealthSystem.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28ADe0G9Aw90O3aazCKrHVkN7Z5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -54,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650650593762</updated>
       <workItem from="1650650609548" duration="2815000" />
+      <workItem from="1650662114092" duration="8679000" />
     </task>
     <servers />
   </component>
@@ -63,7 +104,19 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
