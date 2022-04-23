@@ -15,6 +15,7 @@ public class Book_Controller : MonoBehaviour
 
     public int damageEnemy = 2;
     
+
     private void Awake()
     {
         _enemiesController = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemies_Controller>();

@@ -21,7 +21,8 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private Transform bookSpawnPoint;
     [SerializeField] private GameObject bookPrefab;
     public bool isBookInstantiated;
-    
+    public bool isBookAttackActive;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -69,7 +70,7 @@ public class Player_Controller : MonoBehaviour
     
     public void PlayerStun()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !isBookAttackActive)
         {
             StartCoroutine(Coroutine_BookIsInstantiated());
             
@@ -83,8 +84,11 @@ public class Player_Controller : MonoBehaviour
 
     IEnumerator Coroutine_BookIsInstantiated()
     {
+        isBookAttackActive = true;
         yield return new WaitForSeconds(0.2f);
         isBookInstantiated = true;
+        yield return new WaitForSeconds(2f);
+        isBookAttackActive = false;
     }
     
     IEnumerator Coroutine_BookIsNotInstantiated()
