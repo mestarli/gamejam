@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d9924e1-312f-41c8-838a-b1baaf36285d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sword_Controller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sword_Controller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemiesHealth_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemiesHealth_Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerHealth_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerHealth_Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" afterDir="false" />
-    </list>
+    <list default="true" id="0d9924e1-312f-41c8-838a-b1baaf36285d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +61,7 @@
       <workItem from="1650662114092" duration="8679000" />
       <workItem from="1650703646441" duration="787000" />
       <workItem from="1650704851008" duration="3028000" />
-      <workItem from="1650708350237" duration="973000" />
+      <workItem from="1650708350237" duration="997000" />
     </task>
     <servers />
   </component>
