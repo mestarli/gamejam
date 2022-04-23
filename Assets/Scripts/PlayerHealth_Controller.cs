@@ -13,7 +13,7 @@ public class PlayerHealth_Controller : MonoBehaviour
 
     void Awake()
     {
-        maxHealth = 100;
+        maxHealth = 300;
         actualHealth = maxHealth;
 
         _playerController = GetComponent<Player_Controller>();
@@ -24,7 +24,7 @@ public class PlayerHealth_Controller : MonoBehaviour
         if (_playerController.isDamaged)
         {
             actualHealth -= damageValue;
-            //GameManager.Instance.playerHealthBarSlider.value = actualHealth;
+            GameManager.Instance.playerHealthBarSlider.value = actualHealth;
 
             if (actualHealth <= 0)
             {

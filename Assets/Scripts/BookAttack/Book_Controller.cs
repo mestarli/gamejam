@@ -10,11 +10,10 @@ public class Book_Controller : MonoBehaviour
     [SerializeField] private Enemies_Controller _enemiesController;
     [SerializeField] private EnemiesHealth_Controller _enemiesHealthController;
     [SerializeField] private Player_Controller _playerController;
-    [SerializeField] private Parabola_Controller _parabolaController;
     
     public bool isCoroutineLungedActive;
 
-    public int damageEnemy = 2;
+    public int damageEnemy = 3;
     
 
     private void Awake()
@@ -36,11 +35,10 @@ public class Book_Controller : MonoBehaviour
             if (_playerController.isBookInstantiated)
             {
                 GetComponent<Parabola_Controller>().FollowParabola();
-                
             }
         }
-        
     }
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Enemy")
@@ -59,7 +57,7 @@ public class Book_Controller : MonoBehaviour
         
         else if (other.gameObject.tag == "Ground")
         {
-            Destroy(gameObject, 2.5f);
+            //gameObject.SetActive(false);
         }
     }
 

@@ -10,6 +10,8 @@ TagManager:
   - ParabolaRoot
   - Book
   - Ground
+  - PlayerSword
+  - EnemySword
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,7 @@ public class EnemiesHealth_Controller : MonoBehaviour
     
     void Awake()
     {
-        maxHealth = 100;
+        maxHealth = 200;
         actualHealth = maxHealth;
 
         _enemiesController = GetComponent<Enemies_Controller>();
@@ -23,7 +23,7 @@ public class EnemiesHealth_Controller : MonoBehaviour
         if (_enemiesController.isLunged)
         {
             actualHealth -= damageValue;
-            //GameManager.Instance.enemyHealthBarSlider.value = actualHealth;
+            GameManager.Instance.enemyHealthBarSlider.value = actualHealth;
 
 
             if (actualHealth <= 0)

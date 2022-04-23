@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,25 +6,35 @@ using UnityEngine;
 public class Sword_Controller : MonoBehaviour
 {
     // Variables
-    public GameObject playerSword;
-    public int playerSwordDamage;
+    public BoxCollider playerSword;
+    public int playerSwordDamage = 3;
 
-    public GameObject enemySword;
-    public int enemySwordDamage;
+    public BoxCollider enemySword;
+    public int enemySwordDamage = 3;
+
+    [SerializeField] private PlayerHealth_Controller _playerHealthController;
     
     // Start is called before the first frame update
     void Start()
     {
-        playerSword = GameObject.FindGameObjectWithTag("PlayerSword");
-        playerSword.GetComponent<BoxCollider>();
+        playerSword = GetComponent<BoxCollider>();
+        playerSword.enabled = false;
+
         
-        enemySword = GameObject.FindGameObjectWithTag("EnemySword");
-        enemySword.GetComponent<BoxCollider>();
+
+        _playerHealthController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth_Controller>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        
+
+       
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,13 @@ public class Enemies_Controller : MonoBehaviour
 {
     // Variables
     [SerializeField] private EnemiesHealth_Controller _enemiesHealthController;
+    [SerializeField] private PlayerHealth_Controller _playerHealthController;
     [SerializeField] private Animator anim;
     [SerializeField] private Rigidbody rb;
     
     public bool isLunged;
+    public GameObject enemySword;
+    public int enemySwordDamage = 3;
     
     void Awake()
     {
@@ -20,6 +24,8 @@ public class Enemies_Controller : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         _enemiesHealthController = GetComponent<EnemiesHealth_Controller>();
+        enemySword = GameObject.FindGameObjectWithTag("EnemySword");
+        enemySword.SetActive(false);
     }
 
     void Update()
@@ -36,6 +42,18 @@ public class Enemies_Controller : MonoBehaviour
             anim.SetBool("Punched", false);
 
             StartCoroutine(Coroutine_DieAnim());
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            { 
+                enemySword.SetActive(true);
+                _playerHealthController.PlayerDamaged(enemySwordDamage);
+            }
         }
     }
 

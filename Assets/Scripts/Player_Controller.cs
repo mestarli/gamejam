@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,18 +19,23 @@ public class Player_Controller : MonoBehaviour
 
     private float x, y;
 
-    [SerializeField] private Transform bookSpawnPoint;
-    public GameObject bookPrefab;
     public bool isBookInstantiated;
-    public bool isBookAttackActive;
 
     public bool isDamaged;
+    public GameObject playerSword;
+    public int playerSwordDamage = 3;
+    
+    [SerializeField] private EnemiesHealth_Controller _enemiesHealthController;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        bookSpawnPoint = GameObject.FindGameObjectWithTag("SpawnBullet").GetComponent<Transform>();
+
+        playerSword = GameObject.FindGameObjectWithTag("PlayerSword");
+        playerSword.SetActive(false);
+        
+        _enemiesHealthController = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemiesHealth_Controller>();
     }
 
     void Update()
@@ -78,15 +84,22 @@ public class Player_Controller : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            playerSword.SetActive(true);
+            
+            if (Input.GetMouseButtonDown(0) && playerSword == true)
+            {
+                _enemiesHealthController.EnemyDamaged(playerSwordDamage);
+            }
+        }
+    }
+
     IEnumerator Coroutine_BookIsInstantiated()
     {
         isBookInstantiated = true;
-        GameObject clone;
-        clone = Instantiate(bookPrefab, bookSpawnPoint.transform.position, bookSpawnPoint.transform.rotation);
-       
-        clone.GetComponent<Parabola_Controller>().FollowParabola();
-        clone.GetComponent<Rigidbody>().useGravity = true;
-        //clone.GetComponent<Rigidbody>().constraints =  RigidbodyConstraints.None;
         yield return new WaitForSeconds(2f);
         isBookInstantiated = false;
     }
