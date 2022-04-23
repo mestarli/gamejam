@@ -11,16 +11,23 @@ using UnityEngine.UIElements;
 public class Player_Controller : MonoBehaviour
 {
     // Variables
+    [Header("Componentes")]
     [SerializeField] private Animator anim;
     [SerializeField] private Rigidbody rb;
 
+    [Header("Variables")]
+    [Space(15)]
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private float rotationSpeed = 200.0f;
 
     private float x, y;
 
+    [Header("Boolean Libro")]
+    [Space(15)]
     public bool isBookInstantiated;
 
+    [Header("Variables daño player")]
+    [Space(15)]
     public bool isDamaged;
     public GameObject playerSword;
     public int playerSwordDamage = 3;
@@ -29,17 +36,21 @@ public class Player_Controller : MonoBehaviour
 
     void Awake()
     {
+        // Recuperación del Animator y del rigidbody
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
 
+        // Se recoge y desactiva el GameObject mediante el tag PlayerSword
         playerSword = GameObject.FindGameObjectWithTag("PlayerSword");
         playerSword.SetActive(false);
         
+        // Se recoge el componente EnemiesHealth_Controller mediante el tag Enemy
         _enemiesHealthController = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemiesHealth_Controller>();
     }
 
     void Update()
     {
+        // Llamada de los métodos de movimiento, ataque con espada y ataque con libro
         PlayerMovement();
         PlayerSwordSlash();
         PlayerStun();
@@ -53,6 +64,7 @@ public class Player_Controller : MonoBehaviour
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
         
+        // Animaciones player
         anim.SetFloat("Speed_X", x);
         anim.SetFloat("Speed_Y", y);
         
@@ -67,36 +79,49 @@ public class Player_Controller : MonoBehaviour
 
     #region Attacks
 
+    // Método para atacar con la espada
     public void PlayerSwordSlash()
     {
-        if (Input.GetMouseButtonDown(0))
+        // Si se pulsa el botón izquierdo del ratón y el collider de la espada esta activo, se ejecutará el if
+        if (Input.GetMouseButtonDown(0) && playerSword == true)
         {
-            Debug.Log("ArmAttack");
+            // Llamada del método encargado de restarle vida al enemigo
+            _enemiesHealthController.EnemyDamaged(playerSwordDamage);
             
+            // Se llama a la coroutine de la espada
+            StartCoroutine(Coroutine_SworsSlashAttack());
         }
     }
     
+    // Método para atacar con el libro
     public void PlayerStun()
     {
+        // Si se pulsa el botón derecho del raton y la variable booleana isBookInstantiated esta a false,
+        //podremos lanzar otro libro
         if (Input.GetMouseButtonDown(1) && !isBookInstantiated)
         {
+            // Se llama a la coroutine del libro
             StartCoroutine(Coroutine_BookIsInstantiated());
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
+        // Si el player entra en contacto con el enemigo se activa el collider de la espada
         if (other.gameObject.tag == "Enemy")
         {
             playerSword.SetActive(true);
-            
-            if (Input.GetMouseButtonDown(0) && playerSword == true)
-            {
-                _enemiesHealthController.EnemyDamaged(playerSwordDamage);
-            }
         }
     }
 
+    // Coroutine para desactivar el collider de la espada y se pueda volver a raelizar el ataque con la espada
+    IEnumerator Coroutine_SworsSlashAttack()
+    {
+        yield return new WaitForSeconds(2f);
+        playerSword.SetActive(false);
+    }
+    
+    // Coroutine para activar y desactivar la boolean para lanzar el libro
     IEnumerator Coroutine_BookIsInstantiated()
     {
         isBookInstantiated = true;
