@@ -23,7 +23,7 @@ public class EnemiesHealth_Controller : MonoBehaviour
         if (_enemiesController.isLunged)
         {
             actualHealth -= damageValue;
-            //GameManager.Instance.healthBarSlider.value = actualHealth;
+            //GameManager.Instance.enemyHealthBarSlider.value = actualHealth;
 
 
             if (actualHealth <= 0)

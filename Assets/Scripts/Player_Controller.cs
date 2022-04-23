@@ -23,6 +23,8 @@ public class Player_Controller : MonoBehaviour
     public bool isBookInstantiated;
     public bool isBookAttackActive;
 
+    public bool isDamaged;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -88,7 +90,6 @@ public class Player_Controller : MonoBehaviour
         yield return new WaitForSeconds(2f);
         isBookInstantiated = false;
     }
-    
 
     #endregion
 }
