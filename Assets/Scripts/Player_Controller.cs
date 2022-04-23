@@ -19,7 +19,7 @@ public class Player_Controller : MonoBehaviour
     private float x, y;
 
     [SerializeField] private Transform bookSpawnPoint;
-    [SerializeField] private GameObject bookPrefab;
+    public GameObject bookPrefab;
     public bool isBookInstantiated;
     public bool isBookAttackActive;
 
@@ -70,32 +70,25 @@ public class Player_Controller : MonoBehaviour
     
     public void PlayerStun()
     {
-        if (Input.GetMouseButtonDown(1) && !isBookAttackActive)
+        if (Input.GetMouseButtonDown(1) && !isBookInstantiated)
         {
             StartCoroutine(Coroutine_BookIsInstantiated());
-            
-            if (isBookInstantiated)
-            {
-                Instantiate(bookPrefab, bookSpawnPoint.transform.position, bookSpawnPoint.transform.rotation);
-                StartCoroutine(Coroutine_BookIsNotInstantiated());
-            }
         }
     }
 
     IEnumerator Coroutine_BookIsInstantiated()
     {
-        isBookAttackActive = true;
-        yield return new WaitForSeconds(0.2f);
         isBookInstantiated = true;
-        yield return new WaitForSeconds(2f);
-        isBookAttackActive = false;
-    }
-    
-    IEnumerator Coroutine_BookIsNotInstantiated()
-    {
+        GameObject clone;
+        clone = Instantiate(bookPrefab, bookSpawnPoint.transform.position, bookSpawnPoint.transform.rotation);
+       
+        clone.GetComponent<Parabola_Controller>().FollowParabola();
+        clone.GetComponent<Rigidbody>().useGravity = true;
+        //clone.GetComponent<Rigidbody>().constraints =  RigidbodyConstraints.None;
         yield return new WaitForSeconds(2f);
         isBookInstantiated = false;
     }
+    
 
     #endregion
 }

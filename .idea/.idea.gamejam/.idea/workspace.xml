@@ -3,19 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="0d9924e1-312f-41c8-838a-b1baaf36285d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Libro.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Libro.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BookAttack/Book_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BookAttack/Book_Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BookAttack/Parabola_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BookAttack/Parabola_Controller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d3b66f0ad4e34a55b6ef91ab8487819313c000/b0/d923a742/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../M7/UF3/Practica_2/Grupo03_ChallengeFinal_Proyecto/Assets/Scripts/Enemies/Virus_Controller.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../M7/UF3/Practica_2/Grupo03_ChallengeFinal_Proyecto/Assets/Scripts/Player/HealthSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,10 +31,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="rider.run.widget.enabled.cache" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -70,6 +66,7 @@
       <workItem from="1650650609548" duration="2815000" />
       <workItem from="1650662114092" duration="8679000" />
       <workItem from="1650703646441" duration="787000" />
+      <workItem from="1650704851008" duration="3028000" />
     </task>
     <servers />
   </component>

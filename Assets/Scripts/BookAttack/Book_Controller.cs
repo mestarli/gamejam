@@ -10,6 +10,7 @@ public class Book_Controller : MonoBehaviour
     [SerializeField] private Enemies_Controller _enemiesController;
     [SerializeField] private EnemiesHealth_Controller _enemiesHealthController;
     [SerializeField] private Player_Controller _playerController;
+    [SerializeField] private Parabola_Controller _parabolaController;
     
     public bool isCoroutineLungedActive;
 
@@ -35,6 +36,7 @@ public class Book_Controller : MonoBehaviour
             if (_playerController.isBookInstantiated)
             {
                 GetComponent<Parabola_Controller>().FollowParabola();
+                
             }
         }
         
