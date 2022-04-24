@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9924e1-312f-41c8-838a-b1baaf36285d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Props/Gardening/Plants.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Props/Gardening/Plants/Flor.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Props/Gardening/Plants/Flor.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Props/Gardening/Plants/Planta1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Props/Gardening/Plants/Planta1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Props/Gardening/Plants/Planta2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Props/Gardening/Plants/Planta2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Props/Gardening/Plants/Planta3.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Props/Gardening/Plants/Planta3.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemySpawn_Controller.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Princess/Princesa.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Princess/Princesa.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Props/Areas/Scene_Prueba2.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Props/Areas/Scene_Prueba2.fbx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestArea/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestArea/Global Volume Profile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +27,6 @@
     <setting file="file://$PROJECT_DIR$/../../M7/UF3/Practica_2/Grupo03_ChallengeFinal_Proyecto/Assets/Scripts/Enemies/SpawnMeteor_Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../M7/UF3/Practica_2/Grupo03_ChallengeFinal_Proyecto/Assets/Scripts/Enemies/SpawnVirus_Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../M7/UF3/Practica_2/Grupo03_ChallengeFinal_Proyecto/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa26504.33995/Spawn_Enemy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,6 +86,7 @@
       <workItem from="1650714100597" duration="7285000" />
       <workItem from="1650723281156" duration="2212000" />
       <workItem from="1650736034819" duration="3399000" />
+      <workItem from="1650821067866" duration="620000" />
     </task>
     <servers />
   </component>
