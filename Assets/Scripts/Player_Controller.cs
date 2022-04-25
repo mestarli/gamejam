@@ -43,7 +43,7 @@ public class Player_Controller : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         // Se recoge y desactiva el GameObject mediante el tag PlayerSword
-        playerSword = GameObject.FindGameO   bjectWithTag("PlayerSword");
+        playerSword = GameObject.FindGameObjectWithTag("PlayerSword");
         playerSword.SetActive(false);
         
         // Se recoge el componente EnemiesHealth_Controller mediante el tag Enemy
