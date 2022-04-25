@@ -30,10 +30,12 @@ public class Player_Controller : MonoBehaviour
     [Space(15)]
     public bool isDamaged;
     public GameObject playerSword;
-    public int playerSwordDamage = 3;
+    public int playerSwordDamage = 40;
     
     [SerializeField] private EnemiesHealth_Controller _enemiesHealthController;
-
+    [SerializeField] private Enemies_Controller _enemiesController;
+    [SerializeField] private GameObject book;
+    
     void Awake()
     {
         // Recuperación del Animator y del rigidbody
@@ -41,11 +43,10 @@ public class Player_Controller : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         // Se recoge y desactiva el GameObject mediante el tag PlayerSword
-        playerSword = GameObject.FindGameObjectWithTag("PlayerSword");
+        playerSword = GameObject.FindGameO   bjectWithTag("PlayerSword");
         playerSword.SetActive(false);
         
         // Se recoge el componente EnemiesHealth_Controller mediante el tag Enemy
-        _enemiesHealthController = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemiesHealth_Controller>();
     }
 
     void Update()
@@ -89,7 +90,7 @@ public class Player_Controller : MonoBehaviour
             _enemiesHealthController.EnemyDamaged(playerSwordDamage);
             
             // Se llama a la coroutine de la espada
-            StartCoroutine(Coroutine_SworsSlashAttack());
+            StartCoroutine(Coroutine_SwordSlashAttack());
         }
     }
     
@@ -102,6 +103,7 @@ public class Player_Controller : MonoBehaviour
         {
             // Se llama a la coroutine del libro
             StartCoroutine(Coroutine_BookIsInstantiated());
+            book.SetActive(true);
         }
     }
 
@@ -111,11 +113,17 @@ public class Player_Controller : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             playerSword.SetActive(true);
+            Debug.Log("EEEE");
+            _enemiesHealthController = other.gameObject.GetComponent<EnemiesHealth_Controller>();
+            _enemiesController = other.gameObject.GetComponent<Enemies_Controller>();
+            _enemiesHealthController.EnemyDamaged(playerSwordDamage);
+            _enemiesController.isLunged = true;
+            _enemiesHealthController.enemyHealthBarSlider.value = _enemiesHealthController.actualHealth;
         }
     }
 
-    // Coroutine para desactivar el collider de la espada y se pueda volver a raelizar el ataque con la espada
-    IEnumerator Coroutine_SworsSlashAttack()
+    // Coroutine para desactivar el collider de la espada y se pueda volver a realizar el ataque con la espada
+    IEnumerator Coroutine_SwordSlashAttack()
     {
         yield return new WaitForSeconds(2f);
         playerSword.SetActive(false);

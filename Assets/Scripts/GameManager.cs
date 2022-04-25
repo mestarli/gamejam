@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public Slider playerHealthBarSlider;
-    public Slider enemyHealthBarSlider;
 
     private bool pausedGame;
     private GameObject backbtn;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemiesHealth_Controller : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class EnemiesHealth_Controller : MonoBehaviour
     public int maxHealth;
     public int actualHealth;
     public bool isCoroutineDieActive;
+    public Slider enemyHealthBarSlider;
 
+    
     [SerializeField] private Enemies_Controller _enemiesController;
     
     void Awake()
@@ -22,8 +25,8 @@ public class EnemiesHealth_Controller : MonoBehaviour
     {
         if (_enemiesController.isLunged)
         {
-            actualHealth -= damageValue;
-            GameManager.Instance.enemyHealthBarSlider.value = actualHealth;
+            actualHealth -= damageValue; 
+            enemyHealthBarSlider.value = actualHealth;
 
 
             if (actualHealth <= 0)

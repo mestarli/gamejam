@@ -11,6 +11,7 @@ public class Book_Controller : MonoBehaviour
     [SerializeField] private Enemies_Controller _enemiesController;
     [SerializeField] private EnemiesHealth_Controller _enemiesHealthController;
     [SerializeField] private Player_Controller _playerController;
+   
     
     [Header("Booleans")]
     [Space(15)]

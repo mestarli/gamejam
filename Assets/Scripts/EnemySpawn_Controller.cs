@@ -11,8 +11,8 @@ public class EnemySpawn_Controller : MonoBehaviour
 
     private int randomIndex_ArraySpawnPoints;
     private Transform currentSpawnPoint;
-
-    private bool isGameOver;
+    
+    [SerializeField] private bool isGameOver;
     private int limitedEnemiesSpawned;
     private int limitTotalEnemiesSpawned = 5;
 
@@ -39,7 +39,8 @@ public class EnemySpawn_Controller : MonoBehaviour
             {
                 SelectRandomSpawnPosition();
                 InstantiateEnemy();
-                yield return new WaitForSeconds(10);
+                limitedEnemiesSpawned++;
+                yield return new WaitForSeconds(3);
             }
 
             else if (limitedEnemiesSpawned == limitTotalEnemiesSpawned)
