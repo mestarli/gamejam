@@ -2,28 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9924e1-312f-41c8-838a-b1baaf36285d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Loki_Fly.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Loki_Fly.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Ui/Collectibles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Ui/Collectibles.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Ui/Enemigo_handleSliderVida.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Ui/Enemigo_handleSliderVida.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Ui/Player_HandleSliderVida.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Ui/Player_HandleSliderVida.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RescueDragon.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RescueDragon.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sounds/Music/GameJamOST_GameOver.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sounds/Music/GameJamOST_GameOver.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sounds/Music/GameJam_OST_Victoria.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sounds/Music/GameJam_OST_Victoria.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/CachoCastilloCartel_Mat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/CachoCastilloCartel_Mat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Base_color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Base_color.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Mixed_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Mixed_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Normal_OpenGL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Normal_OpenGL.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoCastilloTexture/Papel1_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/CachoVolcanCartel_Mat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/CachoVolcanCartel_Mat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Base_color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Base_color.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Mixed_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Mixed_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Normal_OpenGL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Normal_OpenGL.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Props/CachoVolcanTexture/Papel1_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossHealth_Controller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossHealth_Controller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boss_Controller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boss_Controller.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Princess_Lara.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Princess_Lara.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss/Animator/Principe_AnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Boss/Animator/Principe_AnimatorController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Caballero1_Walking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Caballero1_Walking.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Caballero2_Walking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Caballero2_Walking.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Caballero3_Walking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Caballero3_Walking.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Caballero4_Walking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Caballero4_Walking.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Daga.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Daga.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Principe_Walking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Principe_Walking.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Rosa.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Rosa.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameOver.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameOver.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Win.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Win.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies_Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerHealth_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerHealth_Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,9 +72,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/ActivateBattleBoss.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RescueDragon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/DisableBattleBoss.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/ActivateBattleBoss.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,7 +96,7 @@
     <property name="rider.run.widget.enabled.cache" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -111,6 +143,9 @@
       <workItem from="1651031932898" duration="5175000" />
       <workItem from="1651039851801" duration="335000" />
       <workItem from="1651040239524" duration="2153000" />
+      <workItem from="1651056525401" duration="1850000" />
+      <workItem from="1651058430493" duration="164000" />
+      <workItem from="1651058652982" duration="1931000" />
     </task>
     <servers />
   </component>

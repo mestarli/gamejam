@@ -158,9 +158,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 500
+  m_MaxValue: 400
   m_WholeNumbers: 0
-  m_Value: 400
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -501,12 +501,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1148716277599342258}
   - component: {fileID: 6417950023072961736}
-  - component: {fileID: 611282436441599109}
   - component: {fileID: 6583766528283214546}
   - component: {fileID: 611282436441599111}
+  - component: {fileID: 404858510}
+  - component: {fileID: 404858511}
   m_Layer: 0
   m_Name: Principe_Walking
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,27 +548,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &611282436441599109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340830955796485128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31dc02d67dc44fe4fa838e528e1b4eef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 4414821525121388622, guid: 6f500ee1d3612a34baa520408c23f4da, type: 3}
-  speed: 2.5
-  maxDistance: 5
-  minDistance: 3
-  life: 400
-  enemySword: {fileID: 4970491022376841867, guid: ab9309d4ae2715f4482baf565c39c798, type: 3}
-  respawnPoint: {fileID: 855276903}
-  barraVida: {fileID: 280695876}
-  damageSonido: {fileID: 0}
 --- !u!54 &6583766528283214546
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -598,6 +578,49 @@ CapsuleCollider:
   m_Height: 1.930963
   m_Direction: 1
   m_Center: {x: -0.026102245, y: 0.9984093, z: 0.0025405884}
+--- !u!114 &404858510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340830955796485128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0e80ae0a246d844863af8839635ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bossHealthController: {fileID: 0}
+  _playerHealthController: {fileID: 0}
+  _playerController: {fileID: 0}
+  anim: {fileID: 0}
+  isLunged: 0
+  enemyDamage: 10
+  rutine: 5
+  chronometer: 0
+  angle: {x: 0, y: 0, z: 0, w: 0}
+  grade: 4
+  target: {fileID: 4414821525121388622, guid: 6f500ee1d3612a34baa520408c23f4da, type: 3}
+  daga: {fileID: 4970491022376841867, guid: ab9309d4ae2715f4482baf565c39c798, type: 3}
+  dagaSpawn: {fileID: 855276903}
+  roseSpawn: {fileID: 2011794459114401814, guid: 9be9fe35bf8b5c34e8c2f3b6dc55b45b, type: 3}
+--- !u!114 &404858511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340830955796485128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1e557e8538f3743b4e0d3f371abd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  actualHealth: 0
+  isCoroutineDieActive: 0
+  bossHealthBarSlider: {fileID: 280695876}
+  _bossController: {fileID: 0}
 --- !u!1 &438494972216459308
 GameObject:
   m_ObjectHideFlags: 0

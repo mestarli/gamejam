@@ -1,22 +1,22 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(Rigidbody))]
-public class Enemies_Controller : MonoBehaviour
+
+public class Boss_Controller : MonoBehaviour
+
 {
     // Variables
-    [SerializeField] private EnemiesHealth_Controller _enemiesHealthController;
+    [SerializeField] private BossHealth_Controller _bossHealthController;
     [SerializeField] private PlayerHealth_Controller _playerHealthController;
     [SerializeField] private Player_Controller _playerController;
     [SerializeField] private Animator anim;
     
     public bool isLunged;
-    public int enemyDamage = 10;
+    public int enemyDamage = 15;
 
     public float rutine = 5;
     public float chronometer;
@@ -24,7 +24,8 @@ public class Enemies_Controller : MonoBehaviour
     public float grade = 4;
     public GameObject target;
 
-    public GameObject enemyPunch;
+    public GameObject daga;
+    public Transform dagaSpawn;
 
     public GameObject roseSpawn;
 
@@ -32,9 +33,9 @@ public class Enemies_Controller : MonoBehaviour
     {
         anim = GetComponent<Animator>();
 
-        _enemiesHealthController = GetComponent<EnemiesHealth_Controller>();
-        enemyPunch = GameObject.FindGameObjectWithTag("EnemyPunch");
-        enemyPunch.SetActive(false);
+        _bossHealthController = GetComponent<BossHealth_Controller>();
+        daga = GameObject.FindGameObjectWithTag("Daga");
+        daga.SetActive(false);
         
         _playerHealthController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth_Controller>();
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
@@ -44,12 +45,12 @@ public class Enemies_Controller : MonoBehaviour
     {
         if (isLunged)
         {
-            anim.SetBool("Punched", true);
+            anim.SetBool("Damage", true);
         }
 
-        if (_enemiesHealthController.actualHealth <= 0 && !_enemiesHealthController.isCoroutineDieActive)
+        if (_bossHealthController.actualHealth <= 0 && !_bossHealthController.isCoroutineDieActive)
         {
-            anim.SetBool("Punched", false);
+            anim.SetBool("Damage", false);
 
             StartCoroutine(Coroutine_DieAnim());
         }
@@ -111,35 +112,46 @@ public class Enemies_Controller : MonoBehaviour
     // Método para atacar con los puños
     public void EnemyPunch()
     {
-        if (enemyPunch == true)
+        if (daga == true)
         {
             anim.SetBool("Attack", true);
             // Llamada del método encargado de restarle vida al enemigo
-            _enemiesHealthController.EnemyDamaged(enemyDamage);
+            _bossHealthController.EnemyDamaged(enemyDamage);
             
-            // Se llama a la coroutine de la espada
+            // Se llama a la coroutine de la daga
             StartCoroutine(Coroutine_PunchAttack());
+            StartCoroutine(Coroutine_DagaIsInstantiated());
         }
     }
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player")
         {
-            enemyPunch.SetActive(true);
+            daga.SetActive(true);
             _playerHealthController.PlayerDamaged(enemyDamage);
             _playerHealthController.PlayerDamaged(enemyDamage);
             _playerController.isDamaged = true;
-            _enemiesHealthController.enemyHealthBarSlider.value = _enemiesHealthController.actualHealth;
+            _bossHealthController.bossHealthBarSlider.value = _bossHealthController.actualHealth;
             
             anim.SetBool("Attack", false);
         }
     }
     
-    // Coroutine para desactivar el collider del pño y se pueda volver a realizar el ataque
+    // Coroutine para activar y desactivar la boolean para lanzar el libro
+    IEnumerator Coroutine_DagaIsInstantiated()
+    {
+        yield return new WaitForSeconds(0.8f);
+        GameObject libro = Instantiate(daga, dagaSpawn.position, Quaternion.identity);
+        libro.GetComponent<Rigidbody>().AddForce(dagaSpawn.forward * 400);
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("Attack", false);
+    }
+    
+    // Coroutine para desactivar la daga y se pueda volver a realizar el ataque
     IEnumerator Coroutine_PunchAttack()
     {
         yield return new WaitForSeconds(2f);
-        enemyPunch.SetActive(false);
+        daga.SetActive(false);
     }
     
     #endregion

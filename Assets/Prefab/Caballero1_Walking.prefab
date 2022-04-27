@@ -1799,6 +1799,7 @@ MonoBehaviour:
   grade: 4
   target: {fileID: 0}
   enemyPunch: {fileID: 0}
+  roseSpawn: {fileID: 2011794459114401814, guid: 9be9fe35bf8b5c34e8c2f3b6dc55b45b, type: 3}
 --- !u!114 &919132149082278959
 MonoBehaviour:
   m_ObjectHideFlags: 0

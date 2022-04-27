@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,11 @@ public class PlayerHealth_Controller : MonoBehaviour
         actualHealth = maxHealth;
 
         _playerController = GetComponent<Player_Controller>();
+    }
+
+    private void Start()
+    {
+        GameManager.Instance.playerHealthBarSlider.value = actualHealth;
     }
 
     public void PlayerDamaged(int damageValue)

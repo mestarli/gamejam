@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5341914410036271458}
   m_Layer: 0
   m_Name: Daga
-  m_TagString: Untagged
+  m_TagString: Daga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
