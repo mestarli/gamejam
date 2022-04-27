@@ -81,14 +81,14 @@ public class Player_Controller : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            anim.SetBool("Running", true);
             speed = 10.0f;
-            Debug.Log("Holi" + speed);
         }
 
         else
         {
+            anim.SetBool("Running", false);
             speed = 5.0f;
-            Debug.Log("Holi" + speed);
         }
     }
 
@@ -102,6 +102,7 @@ public class Player_Controller : MonoBehaviour
         // Si se pulsa el botón izquierdo del ratón y el collider de la espada esta activo, se ejecutará el if
         if (Input.GetMouseButtonDown(0) && playerSword == true)
         {
+            anim.SetBool("SwordAttack", true);
             // Llamada del método encargado de restarle vida al enemigo
             _enemiesHealthController.EnemyDamaged(playerSwordDamage);
             
@@ -117,6 +118,7 @@ public class Player_Controller : MonoBehaviour
         //podremos lanzar otro libro
         if (Input.GetMouseButtonDown(1) && !isBookInstantiated)
         {
+            anim.SetBool("BookAttack", true);
             // Se llama a la coroutine del libro
             StartCoroutine(Coroutine_BookIsInstantiated());
             book.SetActive(true);
@@ -134,6 +136,7 @@ public class Player_Controller : MonoBehaviour
             _enemiesHealthController.EnemyDamaged(playerSwordDamage);
             _enemiesController.isLunged = true;
             _enemiesHealthController.enemyHealthBarSlider.value = _enemiesHealthController.actualHealth;
+            anim.SetBool("SwordAttack", false);
         }
     }
 
@@ -150,6 +153,7 @@ public class Player_Controller : MonoBehaviour
         isBookInstantiated = true;
         yield return new WaitForSeconds(2f);
         isBookInstantiated = false;
+        anim.SetBool("BookAttack", false);
     }
 
     #endregion
