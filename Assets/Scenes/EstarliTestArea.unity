@@ -2111,7 +2111,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 929985597788340009, guid: 2c310352fb605ed4d92b5cdfeba4883a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c310352fb605ed4d92b5cdfeba4883a, type: 3}
 --- !u!114 &4015814688360944109
 MonoBehaviour:
@@ -2319,6 +2320,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1762942664, guid: 6f500ee1d3612a34baa520408c23f4da, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997344049, guid: 6f500ee1d3612a34baa520408c23f4da, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997344050, guid: 6f500ee1d3612a34baa520408c23f4da, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1997344051, guid: 6f500ee1d3612a34baa520408c23f4da, type: 3}
       propertyPath: ParabolaRoot
       value: 
@@ -2375,7 +2388,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Princess_Lara
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4414821525121388622, guid: 6f500ee1d3612a34baa520408c23f4da, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1997344050, guid: 6f500ee1d3612a34baa520408c23f4da, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6f500ee1d3612a34baa520408c23f4da, type: 3}
 --- !u!4 &7757111542184316386
 Transform:
