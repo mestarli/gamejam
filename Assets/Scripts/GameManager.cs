@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private GameObject pausebtn;
 
     public Text rosesCountText;
-    public int collectedRoses;
+    public int collectedRosesScore = 5;
     
     void Awake()
     {
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        rosesCountText.text = "" + collectedRosesScore;
     }
 
     // Update is called once per frame
@@ -42,21 +44,23 @@ public class GameManager : MonoBehaviour
 
     public void UpdatePickablesScore()
     {
-        rosesCountText.text = collectedRoses + "";
+        rosesCountText.text = collectedRosesScore + "";
     }
 
     public void IncreaseScore()
     {
-        collectedRoses++;
+        collectedRosesScore++;
         UpdatePickablesScore();
     }
 
     #endregion
+    
     #region Play Game
 
     public void PlayGame()
     {
         SceneManager.LoadScene("TestArea");
+        collectedRosesScore = 0;
     }
 
     #endregion
@@ -125,6 +129,8 @@ public class GameManager : MonoBehaviour
 
         // Cargamos la escena
         SceneManager.LoadScene("MainMenu");
+
+        collectedRosesScore = 0;
     }
     
     // Método para salir del juego
@@ -140,6 +146,7 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         SceneManager.LoadScene("WinGame");
+        collectedRosesScore = 0;
     }
 
     #endregion
@@ -149,6 +156,7 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         SceneManager.LoadScene("GameOver");
+        collectedRosesScore = 0;
     }
 
     #endregion
