@@ -3,22 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0d9924e1-312f-41c8-838a-b1baaf36285d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Caballero1_Walking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Caballero1_Walking.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Caballero2_Walking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Caballero2_Walking.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Caballero3_Walking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Caballero3_Walking.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Caballero4_Walking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Caballero4_Walking.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Libro.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Libro.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Princess_Lara.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Princess_Lara.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Principe_Walking.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Principe_Walking.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Terreno.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Terreno.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies_Controller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerHealth_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerHealth_Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +20,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa17020.18026/Car_Controller.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa17020.14676/Enemies_Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../M7/UF3/Practica_2/Grupo03_ChallengeFinal_Proyecto/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,6 +87,7 @@
       <workItem from="1651021502696" duration="4166000" />
       <workItem from="1651030507683" duration="209000" />
       <workItem from="1651031932898" duration="5175000" />
+      <workItem from="1651039851801" duration="335000" />
     </task>
     <servers />
   </component>

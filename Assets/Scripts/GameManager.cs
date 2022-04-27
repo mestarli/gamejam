@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     private bool pausedGame;
     private GameObject backbtn;
     private GameObject pausebtn;
+
+    public Text rosesCountText;
+    public int collectedRoses;
     
     void Awake()
     {
@@ -35,6 +38,20 @@ public class GameManager : MonoBehaviour
         PauseEsc();
     }
 
+    #region Collectibles
+
+    public void UpdatePickablesScore()
+    {
+        rosesCountText.text = collectedRoses + "";
+    }
+
+    public void IncreaseScore()
+    {
+        collectedRoses++;
+        UpdatePickablesScore();
+    }
+
+    #endregion
     #region Play Game
 
     public void PlayGame()
