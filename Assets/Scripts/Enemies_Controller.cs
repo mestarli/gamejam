@@ -11,12 +11,12 @@ public class Enemies_Controller : MonoBehaviour
     // Variables
     [SerializeField] private EnemiesHealth_Controller _enemiesHealthController;
     [SerializeField] private PlayerHealth_Controller _playerHealthController;
+    [SerializeField] private Player_Controller _playerController;
     [SerializeField] private Animator anim;
     [SerializeField] private Rigidbody rb;
     
     public bool isLunged;
-    public GameObject enemySword;
-    public int enemySwordDamage = 3;
+    public int enemyDamage = 10;
     
     void Awake()
     {
@@ -24,8 +24,6 @@ public class Enemies_Controller : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         _enemiesHealthController = GetComponent<EnemiesHealth_Controller>();
-        enemySword = GameObject.FindGameObjectWithTag("EnemySword");
-        enemySword.SetActive(false);
     }
 
     void Update()
@@ -45,17 +43,22 @@ public class Enemies_Controller : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    #region DamageToPlayer
+    
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            { 
-                enemySword.SetActive(true);
-                _playerHealthController.PlayerDamaged(enemySwordDamage);
-            }
+            _playerHealthController.PlayerDamaged(enemyDamage);
+            _playerHealthController = other.gameObject.GetComponent<PlayerHealth_Controller>();
+            _playerController = other.gameObject.GetComponent<Player_Controller>();
+            _playerHealthController.PlayerDamaged(enemyDamage);
+            _playerController.isDamaged = true;
+            _enemiesHealthController.enemyHealthBarSlider.value = _enemiesHealthController.actualHealth;
         }
     }
+    
+    #endregion
 
     IEnumerator Coroutine_DieAnim()
     {
