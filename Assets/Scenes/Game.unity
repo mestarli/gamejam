@@ -465,10 +465,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3355217489363958655, guid: 9fe093717ff59f845ac2c002c4d52f7d, type: 3}
-      propertyPath: enemyHealthBarSlider
-      value: 
-      objectReference: {fileID: 1966614726}
     - target: {fileID: 3355217489363958656, guid: 9fe093717ff59f845ac2c002c4d52f7d, type: 3}
       propertyPath: target
       value: 
@@ -777,7 +773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.33837163, g: 1, b: 0.24056602, a: 1}
+  m_Color: {r: 0.9245283, g: 0.58203727, b: 0.5800107, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1075,22 +1071,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3013497962693215979, guid: 05260c21a6533da4b9fc0fa99ca125fe, type: 3}
   m_PrefabInstance: {fileID: 1010352248}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &496958460 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 908538293, guid: eaa0cb3fb9377864096695d615c37c1c, type: 3}
-  m_PrefabInstance: {fileID: 1197428536831509874}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &500029439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4573218298664533385, guid: 9fe093717ff59f845ac2c002c4d52f7d, type: 3}
   m_PrefabInstance: {fileID: 141596844}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &533785560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 533785561}
+  - component: {fileID: 533785563}
+  - component: {fileID: 533785562}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &533785561
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533785560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.32649, y: 0.32649, z: 0.32649}
+  m_Children: []
+  m_Father: {fileID: 2029773284}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 253, y: -30}
+  m_SizeDelta: {x: 2048, y: 2048}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &533785562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533785560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ed4252e755318224fb14b808aec9b957, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &533785563
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533785560}
+  m_CullTransparentMesh: 1
 --- !u!1 &564932302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,7 +1293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 962.0214, y: 0.00015258789}
+  m_AnchoredPosition: {x: 940, y: -37}
   m_SizeDelta: {x: 705.54, y: 400.2319}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &616058495
@@ -1269,7 +1329,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '5 '
+  m_Text: '0
+
+'
 --- !u!222 &616058496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1550,18 +1612,6 @@ PrefabInstance:
     - target: {fileID: 583561777, guid: e15d2a9ff566e89478820b186a7daaab, type: 3}
       propertyPath: m_Name
       value: Caballero4HealthBar_sldr
-      objectReference: {fileID: 0}
-    - target: {fileID: 583561778, guid: e15d2a9ff566e89478820b186a7daaab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 583561778, guid: e15d2a9ff566e89478820b186a7daaab, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 583561778, guid: e15d2a9ff566e89478820b186a7daaab, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 2.22
       objectReference: {fileID: 0}
     - target: {fileID: 652425333427692393, guid: e15d2a9ff566e89478820b186a7daaab, type: 3}
       propertyPath: enemyHealthBarSlider
@@ -4364,7 +4414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -688, y: 424}
+  m_AnchoredPosition: {x: -688, y: 463}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644992641
@@ -5097,17 +5147,6 @@ Transform:
   m_Father: {fileID: 925120417}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1966614726 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2123458759, guid: 9fe093717ff59f845ac2c002c4d52f7d, type: 3}
-  m_PrefabInstance: {fileID: 141596844}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1989466675
 GameObject:
   m_ObjectHideFlags: 0
@@ -5292,7 +5331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: b06158c306496464a92b6d68b6191bdb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5340,12 +5379,13 @@ RectTransform:
   m_LocalScale: {x: 0.25883, y: 0.25883, z: 0.25883}
   m_Children:
   - {fileID: 616058494}
+  - {fileID: 533785561}
   m_Father: {fileID: 665910500}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 595, y: 469}
+  m_AnchoredPosition: {x: 595, y: 461}
   m_SizeDelta: {x: 982.7373, y: 400.2319}
   m_Pivot: {x: 0.49999997, y: 0.5000001}
 --- !u!114 &2029773285
@@ -5381,7 +5421,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Rosas:'
+  m_Text: 
 --- !u!222 &2029773286
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5636,10 +5676,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caballero2_Walking_2
       objectReference: {fileID: 0}
-    - target: {fileID: 4268240490516435681, guid: eaa0cb3fb9377864096695d615c37c1c, type: 3}
-      propertyPath: enemyHealthBarSlider
-      value: 
-      objectReference: {fileID: 496958460}
     - target: {fileID: 4268240490516435682, guid: eaa0cb3fb9377864096695d615c37c1c, type: 3}
       propertyPath: target
       value: 
