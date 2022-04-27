@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9924e1-312f-41c8-838a-b1baaf36285d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Daga.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Daga.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/SueloVolcanico_Mat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/SueloVolcanico_Mat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Base_color.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Base_color.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Height.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Height.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Mixed_AO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Mixed_AO.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Normal_OpenGL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Normal_OpenGL.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Roughness.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Terreno.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Terreno.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="rider.run.widget.enabled.cache" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -102,6 +83,7 @@
       <workItem from="1650982763734" duration="1189000" />
       <workItem from="1651007703402" duration="2941000" />
       <workItem from="1651021502696" duration="4166000" />
+      <workItem from="1651030507683" duration="209000" />
     </task>
     <servers />
   </component>
