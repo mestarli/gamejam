@@ -68,13 +68,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423329782}
-  m_LocalRotation: {x: 0.03734359, y: -0.36635247, z: -0.011089492, w: 0.9296604}
-  m_LocalPosition: {x: -0.45, y: 0.399, z: 1.217}
+  m_LocalRotation: {x: -0.42626822, y: -0.01899363, z: 0.8864952, w: 0.17905557}
+  m_LocalPosition: {x: -1.65, y: 0.7, z: 0.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2420927374730097756}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -6.833, y: -50.177, z: 160.364}
 --- !u!1 &67169105341714156
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,9 +912,11 @@ GameObject:
   - component: {fileID: 8043642596190877256}
   - component: {fileID: 1746594008481138570}
   - component: {fileID: 6594362502315001551}
+  - component: {fileID: 1133297115}
+  - component: {fileID: 1133297116}
   m_Layer: 0
   m_Name: Princess_Lara
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -968,7 +970,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &6594362502315001551
 CapsuleCollider:
@@ -984,6 +986,47 @@ CapsuleCollider:
   m_Height: 2.223062
   m_Direction: 1
   m_Center: {x: 0, y: 1.1589599, z: 0.20604956}
+--- !u!114 &1133297115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414821525121388622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe776a3ca7c7ff47a183ec5e7e1c70e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  actualHealth: 0
+  isCoroutineDieActive: 0
+  _playerController: {fileID: 0}
+--- !u!114 &1133297116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414821525121388622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2681421cd1b0304b8ee564af1ebfd0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  rb: {fileID: 0}
+  speed: 5
+  rotationSpeed: 200
+  isBookInstantiated: 0
+  isDamaged: 0
+  playerSword: {fileID: 0}
+  playerSwordDamage: 15
+  _enemiesHealthController: {fileID: 0}
+  _enemiesController: {fileID: 0}
+  book: {fileID: 1434535197728975358, guid: dc79b73b31d2b664397e6cdbc3b2d4bc, type: 3}
+  bookSpawn: {fileID: 1423329783}
+  disablePlayerSword: {fileID: 7677666478827654397}
 --- !u!1 &4717341819169406913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,7 +1754,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1593577335283316231, guid: 0133c1ce3456f974093979826b0c241c, type: 3}
 --- !u!1 &8246646208487169298
@@ -1995,13 +2038,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0133c1ce3456f974093979826b0c241c, type: 3}
---- !u!4 &7045701643341534791 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0133c1ce3456f974093979826b0c241c, type: 3}
-  m_PrefabInstance: {fileID: 7371800150311661996}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7677666478827654397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0133c1ce3456f974093979826b0c241c, type: 3}
+  m_PrefabInstance: {fileID: 7371800150311661996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7045701643341534791 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0133c1ce3456f974093979826b0c241c, type: 3}
   m_PrefabInstance: {fileID: 7371800150311661996}
   m_PrefabAsset: {fileID: 0}
