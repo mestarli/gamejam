@@ -11,9 +11,9 @@ TagManager:
   - Book
   - Ground
   - PlayerSword
-  - EnemySword
-  - SpawnPoint
   - EnemyHealth
+  - EnemyPunch
+  - DeathLimit
   layers:
   - Default
   - TransparentFX

@@ -38,20 +38,6 @@ public class PlayerHealth_Controller : MonoBehaviour
         }
     }
 
-    public void StartDamagedState()
-    {
-        StartCoroutine(Coroutine_LoseHealth());
-    }
-
-    IEnumerator Coroutine_LoseHealth()
-    {
-        if (_playerController.isDamaged && !isCoroutineDieActive)
-        {
-            PlayerDamaged(1);
-            yield return new WaitForSeconds(1);
-        }
-    }
-    
     IEnumerator Coroutine_Die()
     {
         yield return new WaitForSeconds(2.0f);

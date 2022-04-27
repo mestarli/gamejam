@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         backbtn.SetActive(false);
     }
 
-    // Método para reiniciar el juego
+    // Método para ir a la escena del main menu del juego
     public void ToMenu()
     {
         // Se pone la variable booleana a false
@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
     
+    // Método para salir del juego
     public void QuitGame()
     {
         Application.Quit();

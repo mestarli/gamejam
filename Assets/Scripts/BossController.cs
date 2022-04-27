@@ -10,23 +10,22 @@ public class BossController : MonoBehaviour
     [SerializeField] private float speed = 2.5f;
     [SerializeField] private float maxDistance = 5f;
     [SerializeField] private float minDistance = 3f;
-    [SerializeField] private float life = 150;
-    private float maxlife = 150;
+    [SerializeField] private float life = 400;
+    private float maxlife = 400;
     private float randomDistanceY = 33.5f;
     
     [SerializeField] private GameObject enemySword;
     [SerializeField] private Transform respawnPoint;
     private bool isFireAttackAvailable = true;
-    private bool isLaserAttackAvailable = true;
 
-    [SerializeField] private Image barraVida;
+    [SerializeField] private Slider barraVida;
     [SerializeField] private AudioSource damageSonido;
 
     void FixedUpdate()
     {
         
         // Para la barra de vida del boss
-        barraVida.fillAmount = life / maxlife;
+        barraVida.value = life / maxlife;
         if(gameObject.activeSelf)
         {
 
@@ -56,10 +55,7 @@ public class BossController : MonoBehaviour
                 Vector3 newDistance = new Vector3(_player.transform.position.x, randomDistanceY, _player.transform.position.z - maxDistance);
                 transform.position = Vector3.MoveTowards(transform.position, newDistance, speed * Time.deltaTime);
             }
-            else
-            {
-                
-            }
+            
             if(distance <= maxDistance && distance >= minDistance)
             {
                 if (isFireAttackAvailable)
@@ -78,7 +74,7 @@ public class BossController : MonoBehaviour
         if(life <= 0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("Finish");
+            SceneManager.LoadScene("GameOver");
         }
     }
 

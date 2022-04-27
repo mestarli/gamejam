@@ -914,6 +914,8 @@ GameObject:
   - component: {fileID: 6594362502315001551}
   - component: {fileID: 1133297115}
   - component: {fileID: 1133297116}
+  - component: {fileID: 6975339063008690835}
+  - component: {fileID: 8828513935953181893}
   m_Layer: 0
   m_Name: Princess_Lara
   m_TagString: Player
@@ -983,9 +985,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5357777
-  m_Height: 2.223062
+  m_Height: 2.2829013
   m_Direction: 1
-  m_Center: {x: 0, y: 1.1589599, z: 0.20604956}
+  m_Center: {x: 0, y: 1.1290402, z: 0.20604956}
 --- !u!114 &1133297115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,6 +1029,47 @@ MonoBehaviour:
   book: {fileID: 1434535197728975358, guid: dc79b73b31d2b664397e6cdbc3b2d4bc, type: 3}
   bookSpawn: {fileID: 1423329783}
   disablePlayerSword: {fileID: 7677666478827654397}
+--- !u!114 &6975339063008690835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414821525121388622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe776a3ca7c7ff47a183ec5e7e1c70e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  actualHealth: 0
+  isCoroutineDieActive: 0
+  _playerController: {fileID: 0}
+--- !u!114 &8828513935953181893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414821525121388622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2681421cd1b0304b8ee564af1ebfd0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  rb: {fileID: 0}
+  speed: 5
+  rotationSpeed: 200
+  isBookInstantiated: 0
+  isDamaged: 0
+  playerSword: {fileID: 0}
+  playerSwordDamage: 15
+  _enemiesHealthController: {fileID: 0}
+  _enemiesController: {fileID: 0}
+  book: {fileID: 0}
+  bookSpawn: {fileID: 0}
+  disablePlayerSword: {fileID: 0}
 --- !u!1 &4717341819169406913
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,31 +25,34 @@ public class Enemies_Controller : MonoBehaviour
     public float grade;
     public GameObject target;
 
+    public GameObject enemyPunch;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
 
         _enemiesHealthController = GetComponent<EnemiesHealth_Controller>();
+        enemyPunch = GameObject.FindGameObjectWithTag("EnemyPunch");
+        enemyPunch.SetActive(false);
     }
 
     void Update()
     {
         if (isLunged)
         {
-            anim.SetBool("Die", false);
             anim.SetBool("Punched", true);
         }
 
         if (_enemiesHealthController.actualHealth <= 0 && !_enemiesHealthController.isCoroutineDieActive)
         {
-            anim.SetBool("Die", true);
             anim.SetBool("Punched", false);
 
             StartCoroutine(Coroutine_DieAnim());
         }
         
         EnemyMovement();
+        EnemyPunch();
     }
 
     #region Enemy Movement
@@ -102,17 +105,41 @@ public class Enemies_Controller : MonoBehaviour
     
     #region DamageToPlayer
     
+    // Método para atacar con los puños
+    public void EnemyPunch()
+    {
+        // Si se pulsa el botón izquierdo del ratón y el collider de la espada esta activo, se ejecutará el if
+        if (enemyPunch == true)
+        {
+            anim.SetBool("Attack", true);
+            // Llamada del método encargado de restarle vida al enemigo
+            _enemiesHealthController.EnemyDamaged(enemyDamage);
+            
+            // Se llama a la coroutine de la espada
+            StartCoroutine(Coroutine_PunchAttack());
+        }
+    }
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player")
         {
+            enemyPunch.SetActive(true);
             _playerHealthController.PlayerDamaged(enemyDamage);
             _playerHealthController = other.gameObject.GetComponent<PlayerHealth_Controller>();
             _playerController = other.gameObject.GetComponent<Player_Controller>();
             _playerHealthController.PlayerDamaged(enemyDamage);
             _playerController.isDamaged = true;
             _enemiesHealthController.enemyHealthBarSlider.value = _enemiesHealthController.actualHealth;
+            
+            anim.SetBool("Attack", false);
         }
+    }
+    
+    // Coroutine para desactivar el collider del pño y se pueda volver a realizar el ataque
+    IEnumerator Coroutine_PunchAttack()
+    {
+        yield return new WaitForSeconds(2f);
+        enemyPunch.SetActive(false);
     }
     
     #endregion

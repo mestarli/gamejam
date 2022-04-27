@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -140,6 +141,11 @@ public class Player_Controller : MonoBehaviour
             _enemiesController.isLunged = true;
             _enemiesHealthController.enemyHealthBarSlider.value = _enemiesHealthController.actualHealth;
             anim.SetBool("SwordAttack", false);
+        }
+
+        if (other.gameObject.tag == "DeathLimit")
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 
