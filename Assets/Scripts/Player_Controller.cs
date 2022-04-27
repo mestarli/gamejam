@@ -30,7 +30,7 @@ public class Player_Controller : MonoBehaviour
     [Space(15)]
     public bool isDamaged;
     public GameObject playerSword;
-    public int playerSwordDamage = 40;
+    public int playerSwordDamage = 15;
     
     [SerializeField] private EnemiesHealth_Controller _enemiesHealthController;
     [SerializeField] private Enemies_Controller _enemiesController;
@@ -53,6 +53,7 @@ public class Player_Controller : MonoBehaviour
     {
         // Llamada de los métodos de movimiento, ataque con espada y ataque con libro
         PlayerMovement();
+        PlayerRun();
         PlayerSwordSlash();
         PlayerStun();
     }
@@ -74,6 +75,21 @@ public class Player_Controller : MonoBehaviour
         
         // Rotación player
         transform.Rotate(0, x * Time.deltaTime * rotationSpeed, 0);
+    }
+
+    private void PlayerRun()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 10.0f;
+            Debug.Log("Holi" + speed);
+        }
+
+        else
+        {
+            speed = 5.0f;
+            Debug.Log("Holi" + speed);
+        }
     }
 
     #endregion
@@ -113,7 +129,6 @@ public class Player_Controller : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             playerSword.SetActive(true);
-            Debug.Log("EEEE");
             _enemiesHealthController = other.gameObject.GetComponent<EnemiesHealth_Controller>();
             _enemiesController = other.gameObject.GetComponent<Enemies_Controller>();
             _enemiesHealthController.EnemyDamaged(playerSwordDamage);

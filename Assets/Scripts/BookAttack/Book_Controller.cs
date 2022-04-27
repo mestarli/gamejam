@@ -19,7 +19,7 @@ public class Book_Controller : MonoBehaviour
 
     [Header("Daño hacia enemigo")]
     [Space(15)]
-    public int damageEnemy = 3;
+    public int damageEnemy = 10;
     
 
     private void Awake()
