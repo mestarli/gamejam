@@ -157,4 +157,15 @@ public class Player_Controller : MonoBehaviour
     }
 
     #endregion
+    
+
+    public void resetDamage()
+    {
+        anim.SetBool("Damaged", false);   
+    }
+
+    public void resetSwordAttack()
+    {
+        anim.SetBool("SwordAttack", false);   
+    }
 }
