@@ -1792,10 +1792,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   isLunged: 0
   enemyDamage: 10
-  rutine: 0
+  rutine: 5
   chronometer: 0
-  angle: {x: 0, y: 0, z: 0, w: 0}
-  grade: 0
+  angle: {x: 0.043619387, y: 0, z: 0, w: 0.99904823}
+  grade: 4
   target: {fileID: 0}
   enemyPunch: {fileID: 0}
 --- !u!114 &919132149082278959
