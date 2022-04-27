@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private GameObject pausebtn;
 
     public Text rosesCountText;
-    public int collectedRosesScore = 5;
+    public int collectedRosesScore;
     
     void Awake()
     {

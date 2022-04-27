@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth_Controller : MonoBehaviour
 {
@@ -42,5 +43,6 @@ public class PlayerHealth_Controller : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         isCoroutineDieActive = true;
+        SceneManager.LoadScene("GameOver");
     }
 }

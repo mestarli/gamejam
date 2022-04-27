@@ -1790,7 +1790,6 @@ MonoBehaviour:
   _playerHealthController: {fileID: 0}
   _playerController: {fileID: 0}
   anim: {fileID: 0}
-  rb: {fileID: 0}
   isLunged: 0
   enemyDamage: 10
   rutine: 0

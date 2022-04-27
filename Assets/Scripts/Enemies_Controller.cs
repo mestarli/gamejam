@@ -14,7 +14,6 @@ public class Enemies_Controller : MonoBehaviour
     [SerializeField] private PlayerHealth_Controller _playerHealthController;
     [SerializeField] private Player_Controller _playerController;
     [SerializeField] private Animator anim;
-    [SerializeField] private Rigidbody rb;
     
     public bool isLunged;
     public int enemyDamage = 10;
@@ -30,11 +29,13 @@ public class Enemies_Controller : MonoBehaviour
     void Awake()
     {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
 
         _enemiesHealthController = GetComponent<EnemiesHealth_Controller>();
         enemyPunch = GameObject.FindGameObjectWithTag("EnemyPunch");
         enemyPunch.SetActive(false);
+        
+        _playerHealthController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth_Controller>();
+        _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
     }
 
     void Update()
@@ -125,8 +126,6 @@ public class Enemies_Controller : MonoBehaviour
         {
             enemyPunch.SetActive(true);
             _playerHealthController.PlayerDamaged(enemyDamage);
-            _playerHealthController = other.gameObject.GetComponent<PlayerHealth_Controller>();
-            _playerController = other.gameObject.GetComponent<Player_Controller>();
             _playerHealthController.PlayerDamaged(enemyDamage);
             _playerController.isDamaged = true;
             _enemiesHealthController.enemyHealthBarSlider.value = _enemiesHealthController.actualHealth;
