@@ -2,15 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9924e1-312f-41c8-838a-b1baaf36285d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Libro.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Libro.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Daga.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Daga.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.gamejam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Princess/Animator/Princess_AnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Princess/Animator/Princess_AnimatorController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Princess_Lara.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Princess_Lara.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EstarliTestArea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EstarliTestArea.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player_Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/SueloVolcanico_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/SueloVolcanico_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Base_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Base_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Height.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Height.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Mixed_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Mixed_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Normal_OpenGL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Normal_OpenGL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDesign/Texture/Suelo/Suelo_Volcan_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Terreno.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Terreno.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestArea.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +59,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
