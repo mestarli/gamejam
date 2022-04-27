@@ -25,6 +25,8 @@ public class Player_Controller : MonoBehaviour
     [Header("Boolean Libro")]
     [Space(15)]
     public bool isBookInstantiated;
+    
+   
 
     [Header("Variables daño player")]
     [Space(15)]
@@ -35,7 +37,8 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private EnemiesHealth_Controller _enemiesHealthController;
     [SerializeField] private Enemies_Controller _enemiesController;
     [SerializeField] private GameObject book;
-    
+    [SerializeField] private Transform bookSpawn;
+    [SerializeField] private GameObject disablePlayerSword;
     void Awake()
     {
         // Recuperación del Animator y del rigidbody
@@ -151,7 +154,12 @@ public class Player_Controller : MonoBehaviour
     IEnumerator Coroutine_BookIsInstantiated()
     {
         isBookInstantiated = true;
+        disablePlayerSword.SetActive(false);
+        yield return new WaitForSeconds(0.8f);
+        GameObject libro = Instantiate(book, bookSpawn.position, Quaternion.identity);
+        libro.GetComponent<Rigidbody>().AddForce(bookSpawn.forward * 400);
         yield return new WaitForSeconds(2f);
+        disablePlayerSword.SetActive(true);
         isBookInstantiated = false;
         anim.SetBool("BookAttack", false);
     }
