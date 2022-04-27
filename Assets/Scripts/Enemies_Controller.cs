@@ -58,7 +58,7 @@ public class Enemies_Controller : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, target.transform.position) > 5)
         {
-            anim.SetBool("walk", false);
+            anim.SetBool("Walk", false);
 
             chronometer += 1 * Time.deltaTime;
 
@@ -70,7 +70,7 @@ public class Enemies_Controller : MonoBehaviour
                 switch (rutine)
                 {
                     case 0:
-                        anim.SetBool("walk", true);
+                        anim.SetBool("Walk", true);
                         break;
                     
                     case 1:
@@ -82,7 +82,7 @@ public class Enemies_Controller : MonoBehaviour
                     case 2:
                         transform.rotation = Quaternion.RotateTowards(transform.rotation, angle, 0.5f);
                         transform.Translate(Vector3.forward * 1 * Time.deltaTime);
-                        anim.SetBool("walk", true);
+                        anim.SetBool("Walk", true);
                         break;
                 }
             }
